@@ -1,13 +1,15 @@
 ﻿@inherits LayoutComponentBase
 
 <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
-<MudSnackbarProvider />
+<MudPopoverProvider />
 
 <div class="page">
     <MudAppBar Color="Color.Dark" Fixed="true">
         <MudElement HtmlTag="div">
-            <span class="text-2xl text-purple-500 font-bold" style="font-family: 'Nothing You Could Do', cursive;">B</span>
-            <a class="text-xl font-semibold">ryan Sanchez | Sr. Dev</a>
+            <MudText Typo="Typo.h6">
+                <span class="text-purple-500 font-bold" style="font-family: 'Nothing You Could Do', cursive;">B</span>
+                ryan Sanchez | Sr. Dev
+            </MudText>
         </MudElement>
         <MudSpacer />
         <MudButtonGroup Variant="Variant.Filled">

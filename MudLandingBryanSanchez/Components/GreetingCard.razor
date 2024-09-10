@@ -1,25 +1,57 @@
-﻿<div class="ma-3" data-aos="fade-down" data-aos-delay="200" style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
-    <MudCard Elevation="4" Outlined="true">
-        <MudCardHeader Class="py-2">
-            <CardHeaderAvatar>
-                <MudAvatar Color="Color.Primary">B</MudAvatar>
-            </CardHeaderAvatar>
-            <CardHeaderContent>
-                <MudText Typo="Typo.h5">Hello!</MudText>
-                <MudText Typo="Typo.body2">Here's a little about your project engineer.</MudText>
-            </CardHeaderContent>
-        </MudCardHeader>
-        <MudCardContent>
-            <iframe style="width: 25vw;height: 15vw;"
-                    src="https://www.youtube.com/embed/YHkBmxpCFAg"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-        </MudCardContent>
-    </MudCard>
-</div>
+﻿<MudBreakpointProvider>
+    <MudHidden Breakpoint="Breakpoint.LgAndUp" Invert="true">
+        <MudCard Elevation="4" Outlined="true" Style="height: 400px; width: 500px;">
+            <MudCardHeader>
+                <CardHeaderAvatar>
+                    <MudAvatar Color="Color.Primary">B</MudAvatar>
+                </CardHeaderAvatar>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Hello!</MudText>
+                    <MudText Typo="Typo.body2">Here's a little about your next project engineer.</MudText>
+                </CardHeaderContent>
+                <CardHeaderActions>
+                    <MudIconButton Icon="@Icons.Material.Filled.Close" Color="Color.Error" OnClick="CloseCallback" />
+                </CardHeaderActions>
+            </MudCardHeader>
+            <MudCardContent>
+                <iframe src="https://www.youtube.com/embed/YHkBmxpCFAg"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </MudCardContent>
+        </MudCard>
+    </MudHidden>
+    <MudHidden Breakpoint="Breakpoint.SmAndDown" Invert="true">
+        <MudCard Elevation="4" Outlined="true" Style="height: 400px; width: 350px;">
+            <MudCardHeader>
+                <CardHeaderAvatar>
+                    <MudAvatar Color="Color.Primary">B</MudAvatar>
+                </CardHeaderAvatar>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Hello!</MudText>
+                    <MudText Typo="Typo.body2">Here's a little about your next project engineer.</MudText>
+                </CardHeaderContent>
+                <CardHeaderActions>
+                    <MudIconButton Icon="@Icons.Material.Filled.Close" Color="Color.Error" OnClick="CloseCallback" />
+                </CardHeaderActions>
+            </MudCardHeader>
+            <MudCardContent>
+                <iframe src="https://www.youtube.com/embed/YHkBmxpCFAg"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </MudCardContent>
+        </MudCard>
+    </MudHidden>
+</MudBreakpointProvider>
 
 @code {
+    [Parameter]
+    [EditorRequired]
+    public EventCallback OnClose { get; set; }
 
+    private async Task CloseCallback() =>
+        await OnClose.InvokeAsync();
 }
