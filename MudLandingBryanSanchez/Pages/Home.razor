@@ -1,0 +1,47 @@
+﻿@page "/"
+@using MudLandingBryanSanchez.Components
+
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+
+<PageTitle>Bryan Sanchez Senior Dev</PageTitle>
+<MudGrid Spacing="4" Class="mt-2">
+    <MudItem lg="12">
+        <Landing />
+    </MudItem>
+    <MudItem lg="12">
+        <GreetingCard />
+    </MudItem>
+    <MudItem lg="12">
+        <Services />
+    </MudItem>
+    <MudItem lg="12">
+        <Technologies />
+    </MudItem>
+    <MudItem lg="12">
+        <About />
+    </MudItem>
+</MudGrid>
+
+
+@code {
+    private IJSObjectReference? module;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "/typewriter.js");
+
+            await module.InvokeVoidAsync("typeText");
+        }
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+}

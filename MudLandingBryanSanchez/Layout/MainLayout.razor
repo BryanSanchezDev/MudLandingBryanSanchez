@@ -1,0 +1,44 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
+<MudSnackbarProvider />
+
+<div class="page">
+    <MudAppBar Color="Color.Dark" Fixed="true">
+        <MudElement HtmlTag="div">
+            <span class="text-2xl text-purple-500 font-bold" style="font-family: 'Nothing You Could Do', cursive;">B</span>
+            <a class="text-xl font-semibold">ryan Sanchez | Sr. Dev</a>
+        </MudElement>
+        <MudSpacer />
+        <MudButtonGroup Variant="Variant.Filled">
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub"
+                           Href="https://github.com/HeadshotCR"
+                           Target="_blank"
+                           Color="Color.Inherit" />
+            <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn"
+                           Href="https://www.linkedin.com/in/bryan-sanchez-ortiz/"
+                           Target="_blank"
+                           Color="Color.Inherit" />
+            <MudIconButton Icon="@Icons.Custom.Brands.WhatsApp"
+                           Href="https://wa.link/z4iq31"
+                           Target="_blank"
+                           Color="Color.Inherit" />
+        </MudButtonGroup>
+        <MudToggleIconButton @bind-Toggled="_isDarkMode"
+                             Icon="@Icons.Material.Filled.DarkMode"
+                             Color="@Color.Inherit"
+                             ToggledIcon="@Icons.Material.Filled.LightMode"
+                             ToggledColor="@Color.Inherit" />
+    </MudAppBar>
+    <MudMainContent>
+        <MudContainer Fixed="true">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</div>
+
+@code {
+    private MudTheme _theme = new();
+
+    private bool _isDarkMode = true;
+}
