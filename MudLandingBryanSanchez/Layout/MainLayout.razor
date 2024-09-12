@@ -33,9 +33,65 @@
                              ToggledColor="@Color.Inherit" />
     </MudAppBar>
     <MudMainContent>
-        <MudContainer Fixed="true">
+        <MudContainer Fixed="true" Class="mb-5">
             @Body
         </MudContainer>
+        <MudElement HtmlTag="footer" Class="bg-white align-end pa-5">
+            <MudGrid Justify="Justify.FlexStart" Spacing="0">
+                <MudItem lg="4">
+                    <MudText Align="Align.Start" Typo="Typo.h3" Style="color: var(--mud-palette-black)">
+                        Let's keep in <span class="text-purple-500 font-bold"
+                                            style="font-family: 'Nothing You Could Do', cursive;">touch!</span>
+                    </MudText>
+                    <MudText Align="Align.Start" Typo="Typo.subtitle1" Style="color: var(--mud-palette-black)">
+                        Find me on any of these platforms, I'll respond in 1-2 business days.
+                    </MudText>
+                </MudItem>
+                <MudItem lg="4">
+                    <MudButtonGroup Variant="Variant.Text" Class="d-flex justify-center">
+                        <MudButton StartIcon="@Icons.Custom.Brands.GitHub"
+                                   Href="https://github.com/HeadshotCR"
+                                   Target="_blank"
+                                   Size="Size.Large"
+                                   IconSize="Size.Large"
+                                   IconColor="Color.Primary">
+                            <MudText Typo="Typo.subtitle1" Style="color: var(--mud-palette-black)">
+                                GitHub
+                            </MudText>
+                        </MudButton>
+                        <MudButton StartIcon="@Icons.Custom.Brands.LinkedIn"
+                                   Href="https://www.linkedin.com/in/bryan-sanchez-ortiz/"
+                                   Target="_blank"
+                                   Size="Size.Large"
+                                   IconSize="Size.Large"
+                                   IconColor="Color.Primary">
+                            <MudText Typo="Typo.subtitle1" Style="color: var(--mud-palette-black)">
+                                LinkedIn
+                            </MudText>
+                        </MudButton>
+                        <MudButton StartIcon="@Icons.Custom.Brands.WhatsApp"
+                                   Href="https://wa.link/z4iq31"
+                                   Target="_blank"
+                                   Size="Size.Large"
+                                   IconSize="Size.Large"
+                                   IconColor="Color.Primary">
+                            <MudText Typo="Typo.subtitle1" Style="color: var(--mud-palette-black)">
+                                WhatsApp
+                            </MudText>
+                        </MudButton>
+                    </MudButtonGroup>
+                </MudItem>
+                <MudItem lg="4" Class="d-flex justify-end">
+                    <MudImage Src="./images/DevelopmentPurple.gif"
+                              Height="150"
+                              Width="150"
+                              Class="pa-5" />
+                </MudItem>
+            </MudGrid>
+        </MudElement>
+        <MudScrollToTop>
+            <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.ArrowCircleUp" />
+        </MudScrollToTop>
     </MudMainContent>
 </div>
 

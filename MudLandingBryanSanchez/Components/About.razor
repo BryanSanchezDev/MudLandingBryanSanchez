@@ -1,52 +1,110 @@
 ﻿<MudPaper Class="pa-5">
     <MudGrid Spacing="2" Justify="Justify.Center">
-        <MudItem lg="12" Class="pb-5">
-            <MudText Typo="Typo.h3" Align="Align.Center">
-                About <span class="text-purple-500 font-bold"
-                            style="font-family: 'Nothing You Could Do', cursive;">Me</span>
-            </MudText>
+        <MudItem lg="12">
+            <div data-aos="fade-right" data-aos-delay="50" data-aos-mirror="true">
+                <MudText Typo="Typo.h3" Align="Align.Center">
+                    About <span class="text-purple-500 font-bold"
+                                style="font-family: 'Nothing You Could Do', cursive;">Me</span>
+                </MudText>
+            </div>
         </MudItem>
-        <MudItem xs="12" lg="4">
-            <MudCard Outlined="true">
-                <MudCardMedia Class="border-solid border-1 transition duration-300 hover:scale-90" Image="/test.png" Height="200" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Old Paint</MudText>
-                    <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                    <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                </MudCardContent>
-                <MudCardActions>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                </MudCardActions>
-            </MudCard>
+        <MudItem lg="12">
+            <div data-aos="fade-right" data-aos-delay="50" data-aos-mirror="true">
+                <MudPaper Square="true" Class="d-flex justify-center pa-5">
+                    <MudGrid>
+                        <MudItem xs="12" lg="6">
+                            <MudText Align="Align.Start" Typo="Typo.body1">
+                                There was a time when people paid for the hour to use a computer with internet access in places called Internet Cafe's
+                                (I'm sorry if I'm making you feel old).
+                                Since I was a little kid I've always been drawn to the "Web",
+                                so whenever a friend or family were to give me money I usually spent it at these places browsing and playing on every page I could.
+                            </MudText>
+                        </MudItem>
+                        <MudItem xs="12" lg="6">
+                            <MudText Align="Align.Start" Typo="Typo.body1">
+                                Now I'm the man that loses track of time while coding and creating stylish and interactive Web pages
+                                with the idea of making people's lives easier. I've leaded multiple application projects for different companies,
+                                so I know my way around the entire lifecycle of an application and understand the requirements to build one.
+                                My experience is mostly with Microsoft technologies, and most recently, I've been designing and developing Blazor applications.
+                            </MudText>
+                        </MudItem>
+                    </MudGrid>
+                </MudPaper>
+            </div>
         </MudItem>
-        <MudItem xs="12" lg="4">
-            <MudCard Outlined="true">
-                <MudCardMedia Class="border-solid border-1 transition duration-300 hover:scale-90" Image="/test.png" Height="200" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Old Paint</MudText>
-                    <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                    <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                </MudCardContent>
-                <MudCardActions>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                </MudCardActions>
-            </MudCard>
-        </MudItem>
-        <MudItem xs="12" lg="4">
-            <MudCard Outlined="true">
-                <MudCardMedia Class="border-solid border-1 transition duration-300 hover:scale-90" Image="/test.png" Height="200" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Old Paint</MudText>
-                    <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                    <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                </MudCardContent>
-                <MudCardActions>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                </MudCardActions>
-            </MudCard>
+        <MudItem lg="12">
+            <div data-aos="fade-left" data-aos-delay="50" data-aos-mirror="true">
+                <MudGrid Spacing="2" Justify="Justify.Center">
+                    <MudItem xs="12" lg="4">
+                        <MudCard Outlined="true">
+                            <MudCardMedia Class="border-solid border-1 transition duration-300 hover:scale-90"
+                                          Image="./images/award.jpg"
+                                          Height="200" />
+                            <MudCardContent>
+                                <MudText Typo="Typo.h5">
+                                    2023 Stand Out Performer
+                                </MudText>
+                                <MudText Typo="Typo.body2">
+                                    Here I'm receving the Stand Out Performer award at Epic Software.
+                                </MudText>
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem xs="12" lg="4">
+                        <MudCard Outlined="true">
+                            <MudCardMedia Class="border-solid border-1 transition duration-300 hover:scale-90"
+                                          Image="./images/title.jpg"
+                                          Height="200" />
+                            <MudCardContent>
+                                <MudText Typo="Typo.h5">
+                                    MEng. Systems Engineering
+                                </MudText>
+                                <MudText Typo="Typo.body2">
+                                    This photo was taken the day I got my MEng at Universidad Estatal a Distancia in Costa Rica.
+                                </MudText>
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudTooltip Duration="500" Text="This page is in Spanish">
+                                    <MudButton Variant="Variant.Text"
+                                               Color="Color.Primary"
+                                               Href="https://www.uned.ac.cr/ecen/ingenieria-informatica-y-administracion-de-proyectos"
+                                               Target="_blank">
+                                        Learn More
+                                    </MudButton>
+                                </MudTooltip>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem xs="12" lg="4">
+                        <MudCard Outlined="true">
+                            <MudCardMedia Class="border-solid border-1 transition duration-300 hover:scale-90"
+                                          Image="./images/crux.jpg"
+                                          Height="200" />
+                            <MudCardContent>
+                                <MudText Typo="Typo.h5">
+                                    Tesoro Directo Team
+                                </MudText>
+                                <MudText Typo="Typo.body2">
+                                    This was team I work with to create a Fintech app for the costarican goverment.
+                                </MudText>
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudTooltip Duration="500" Text="This page is in Spanish">
+                                    <MudButton Variant="Variant.Text"
+                                               Color="Color.Primary"
+                                               Href="https://www.elfinancierocr.com/finanzas/tesoro-directo-esta-ganando-protagonismo-como-opcion-de-fondeo-de-hacienda/VKYJMWBQT5G7RHCAX5IEOBV7X4/story/"
+                                               Target="_blank">
+                                        Learn More
+                                    </MudButton>
+                                </MudTooltip>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                </MudGrid>
+            </div>
         </MudItem>
     </MudGrid>
 </MudPaper>

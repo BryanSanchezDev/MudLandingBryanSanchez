@@ -7,7 +7,7 @@
         </MudItem>
         <MudItem xs="12" lg="2" Class="d-flex justify-center">
             <div data-aos="fade-down" data-aos-delay="50">
-                <MudImage Src="/profilepic.jpg"
+                <MudImage Src="./images/profilepic.jpg"
                           Elevation="25"
                           Height="150"
                           Width="150"
@@ -23,10 +23,15 @@
                 </MudText>
             </div>
         </MudItem>
-        <MudItem xs="12" lg="4" Class="d-flex justify-center align-end">
-            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@ToggleOpen">
-                Let's meet
-            </MudButton>
+        <MudItem xs="12" lg="4" Class="d-flex justify-center">
+            <MudStack>
+                <MudImage Src="./images/Monitors.gif"
+                          Height="150"
+                          Width="150" />
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@ToggleOpen">
+                    Let's meet
+                </MudButton>
+            </MudStack>
         </MudItem>
         <MudItem xs="12" lg="4">
             <div data-aos="fade-down" data-aos-delay="50">

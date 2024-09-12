@@ -1,0 +1,90 @@
+﻿<MudPaper Class="pa-5 mb-5 from-white to-gray-300">
+    <MudGrid>
+        <MudItem lg="12">
+            <MudText Align="Align.Center" Typo="Typo.h3">
+                <span class="text-purple-500 font-bold" style="font-family: 'Nothing You Could Do', cursive;">
+                    Testimonials
+                </span>
+            </MudText>
+        </MudItem>
+        <MudItem xs="12" lg="6">
+            <MudList T="string">
+                <MudListItem OnClick="() => UpdateText(0)">
+                    <AvatarContent>
+                        <MudAvatar>
+                            <MudImage Src="./images/profilepic.jpg" />
+                        </MudAvatar>
+                    </AvatarContent>
+                    <ChildContent>
+                        <MudText Typo="Typo.h6">Heading</MudText>
+                        <MudText Typo="Typo.subtitle1">Lorem ipsum dolor sit amet</MudText>
+                    </ChildContent>
+                </MudListItem>
+                <MudListItem OnClick="() => UpdateText(1)">
+                    <AvatarContent>
+                        <MudAvatar>
+                            <MudImage Src="./images/profilepic.jpg" />
+                        </MudAvatar>
+                    </AvatarContent>
+                    <ChildContent>
+                        <MudText Typo="Typo.h6">Heading</MudText>
+                        <MudText Typo="Typo.subtitle1">Lorem ipsum dolor sit amet</MudText>
+                    </ChildContent>
+                </MudListItem>
+                <MudListItem OnClick="() => UpdateText(2)">
+                    <AvatarContent>
+                        <MudAvatar>
+                            <MudImage Src="./images/profilepic.jpg" />
+                        </MudAvatar>
+                    </AvatarContent>
+                    <ChildContent>
+                        <MudText Typo="Typo.h6">Heading</MudText>
+                        <MudText Typo="Typo.subtitle1">Lorem ipsum dolor sit amet</MudText>
+                    </ChildContent>
+                </MudListItem>
+            </MudList>
+        </MudItem>
+        <MudItem xs="12" lg="6">
+            <MudCarousel @ref="_carousel"
+                         @bind-SelectedIndex="selectedIndex"
+                         ItemsSource="@_source"
+                         Class="mud-width-full"
+                         Style="height:220px;"
+                         AutoCycle="false"
+                         EnableSwipeGesture="true"
+                         ShowArrows="false"
+                         ShowBullets="true">
+                <ItemTemplate>
+                    <div class="d-flex justify-center" style="height:100%;">
+                        <MudStack Class="mud-width-full" Justify="Justify.FlexStart" Wrap="Wrap.NoWrap">
+                            <MudText Typo="Typo.h4" Class="pb-2">
+                                @context.ElementAt(0)
+                            </MudText>
+                            <MudText Typo="Typo.body1">
+                                @context.ElementAt(1)
+                            </MudText>
+                        </MudStack>
+                    </div>
+                </ItemTemplate>
+            </MudCarousel>
+        </MudItem>
+    </MudGrid>
+
+</MudPaper>
+
+@code {
+    private int selectedIndex;
+    private MudCarousel<string[]>? _carousel;
+    private List<string[]> _source = new List<string[]>
+    {
+        new string[] { "Header 1", "Text 1 describing the first testimonial." },
+        new string[] { "Header 2", "Text 2 describing the first testimonial." },
+        new string[] { "Header 3", "Text 3 describing the first testimonial." }
+    };
+
+    protected override void OnInitialized() =>
+        selectedIndex = 0;
+
+    private void UpdateText(int key) =>
+        selectedIndex = key;
+}

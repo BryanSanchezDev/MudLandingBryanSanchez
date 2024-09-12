@@ -7,19 +7,29 @@
 <PageTitle>Bryan Sanchez Senior Dev</PageTitle>
 <MudGrid Spacing="4" Class="mt-2">
     <MudItem lg="12">
-        <Landing />
+        <div data-aos="fade-left" data-aos-delay="50" data-aos-mirror="true">
+            <Landing />
+        </div>
     </MudItem>
     <MudItem lg="12">
-        <Services />
+        <div data-aos="fade-right" data-aos-delay="50" data-aos-mirror="true">
+            <Services />
+        </div>
     </MudItem>
     <MudItem lg="12">
-        <Technologies />
+        <div data-aos="fade-left" data-aos-delay="50" data-aos-mirror="true">
+            <Technologies />
+        </div>
     </MudItem>
     <MudItem lg="12">
         <About />
     </MudItem>
+    <MudItem lg="12">
+        <div data-aos="fade-left" data-aos-delay="50" data-aos-mirror="true">
+            <Testimonials />
+        </div>
+    </MudItem>
 </MudGrid>
-
 
 @code {
     private IJSObjectReference? module;
