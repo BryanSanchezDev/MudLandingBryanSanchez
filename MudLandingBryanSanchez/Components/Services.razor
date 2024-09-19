@@ -1,76 +1,88 @@
 ﻿<MudPaper Class="pa-5">
     <MudGrid Class="mt-10">
         <MudItem lg="12">
-            <MudStack Justify="Justify.Center">
-                <MudText Align="Align.Center" Typo="Typo.h3">
-                    How we'll <span class="text-purple-500 font-bold"
-                                    style="font-family: 'Nothing You Could Do', cursive;">Work</span>
-                </MudText>
-                <MudText Align="Align.Center" Typo="Typo.input">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus cupidatat.
-                    Lorem ipsum dolor sit amet consectetur.
-                </MudText>
-            </MudStack>
+            <div data-aos="fade-right" data-aos-delay="50" data-aos-mirror="true">
+                <MudStack Justify="Justify.Center">
+                    <MudText Align="Align.Center" Typo="Typo.h3">
+                        How we'll <span class="text-purple-500 font-bold"
+                                        style="font-family: 'Nothing You Could Do', cursive;">Work</span>
+                    </MudText>
+                    <MudBreakpointProvider>
+                        <MudHidden Breakpoint="Breakpoint.MdAndUp" Invert="true">
+                            <Timeline Orientation="TimelineOrientation.Horizontal" />
+                        </MudHidden>
+                        <MudHidden Breakpoint="Breakpoint.SmAndDown" Invert="true">
+                            <Timeline Orientation="TimelineOrientation.Vertical" />
+                        </MudHidden>
+                    </MudBreakpointProvider>
+                </MudStack>
+            </div>
         </MudItem>
-        <MudItem lg="4">
-            <MudCard>
-                <MudCardHeader Class="pb-0">
-                    <CardHeaderAvatar>
-                        <MudAvatar Color="Color.Warning" Variant="Variant.Filled">
-                            <MudIcon Color="Color.Dark" Icon="@Icons.Material.Filled.Code" Size="Size.Medium" />
-                        </MudAvatar>
-                    </CardHeaderAvatar>
-                </MudCardHeader>
-                <MudCardContent>
-                    <MudText Typo="Typo.h6">
-                        Modern tools and Frameworks
-                    </MudText>
-                    <MudText Typo="Typo.body2">
-                        We'll utilize modern tools and frameworks to develop high-quality software solutions
-                        that enhance efficiency, performance, and scalability for diverse business needs.
-                    </MudText>
-                </MudCardContent>
-            </MudCard>
-        </MudItem>
-        <MudItem lg="4">
-            <MudCard>
-                <MudCardHeader Class="pb-0">
-                    <CardHeaderAvatar>
-                        <MudAvatar Color="Color.Warning" Variant="Variant.Filled">
-                            <MudIcon Color="Color.Dark" Icon="@Icons.Material.Filled.Devices" Size="Size.Medium" />
-                        </MudAvatar>
-                    </CardHeaderAvatar>
-                </MudCardHeader>
-                <MudCardContent>
-                    <MudText Typo="Typo.h6">
-                        Fully Responsive Design
-                    </MudText>
-                    <MudText Typo="Typo.body2">
-                        My focus on fully responsive design ensures that applications deliver seamless user experiences across all devices,
-                        adapting beautifully to any screen size or orientation.
-                    </MudText>
-                </MudCardContent>
-            </MudCard>
-        </MudItem>
-        <MudItem lg="4">
-            <MudCard>
-                <MudCardHeader Class="pb-0">
-                    <CardHeaderAvatar>
-                        <MudAvatar Color="Color.Warning" Variant="Variant.Filled">
-                            <MudIcon Color="Color.Dark" Icon="@Icons.Material.Filled.PersonSearch" Size="Size.Medium" />
-                        </MudAvatar>
-                    </CardHeaderAvatar>
-                </MudCardHeader>
-                <MudCardContent>
-                    <MudText Typo="Typo.h6">
-                        Client First Focus
-                    </MudText>
-                    <MudText Typo="Typo.body2">
-                        With a client-first focus, I prioritize understanding your unique requirements, delivering tailored solutions
-                        that encourage collaboration looking after exceeding your expectations throughout the project lifecycle.
-                    </MudText>
-                </MudCardContent>
-            </MudCard>
+        <MudItem lg="12">
+            <div data-aos="fade-left" data-aos-delay="50" data-aos-mirror="true">
+                <MudGrid>
+                    <MudItem xs="12" lg="4">
+                        <MudCard>
+                            <MudCardHeader Class="pb-0">
+                                <CardHeaderAvatar>
+                                    <MudAvatar Color="Color.Warning" Variant="Variant.Filled">
+                                        <MudIcon Color="Color.Dark" Icon="@Icons.Material.Filled.Code" Size="Size.Medium" />
+                                    </MudAvatar>
+                                </CardHeaderAvatar>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <MudText Typo="Typo.h6">
+                                    Modern tools and Frameworks
+                                </MudText>
+                                <MudText Typo="Typo.body2">
+                                    We'll utilize modern tools and frameworks to develop high-quality software solutions
+                                    that enhance efficiency, performance, and scalability for diverse business needs.
+                                </MudText>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem xs="12" lg="4">
+                        <MudCard>
+                            <MudCardHeader Class="pb-0">
+                                <CardHeaderAvatar>
+                                    <MudAvatar Color="Color.Warning" Variant="Variant.Filled">
+                                        <MudIcon Color="Color.Dark" Icon="@Icons.Material.Filled.Devices" Size="Size.Medium" />
+                                    </MudAvatar>
+                                </CardHeaderAvatar>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <MudText Typo="Typo.h6">
+                                    Fully Responsive Design
+                                </MudText>
+                                <MudText Typo="Typo.body2">
+                                    My focus on fully responsive design ensures that applications deliver seamless user experiences across all devices,
+                                    adapting beautifully to any screen size or orientation.
+                                </MudText>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem xs="12" lg="4">
+                        <MudCard>
+                            <MudCardHeader Class="pb-0">
+                                <CardHeaderAvatar>
+                                    <MudAvatar Color="Color.Warning" Variant="Variant.Filled">
+                                        <MudIcon Color="Color.Dark" Icon="@Icons.Material.Filled.PersonSearch" Size="Size.Medium" />
+                                    </MudAvatar>
+                                </CardHeaderAvatar>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <MudText Typo="Typo.h6">
+                                    Client First Focus
+                                </MudText>
+                                <MudText Typo="Typo.body2">
+                                    With a client-first focus, I prioritize understanding your unique requirements, delivering tailored solutions
+                                    that encourage collaboration looking after exceeding your expectations throughout the project lifecycle.
+                                </MudText>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+                </MudGrid>
+            </div>
         </MudItem>
     </MudGrid>
 </MudPaper>

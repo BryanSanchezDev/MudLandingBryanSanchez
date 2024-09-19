@@ -38,7 +38,7 @@
         </MudContainer>
         <MudElement HtmlTag="footer" Class="bg-white align-end pa-5">
             <MudGrid Justify="Justify.FlexStart" Spacing="0">
-                <MudItem lg="4">
+                <MudItem lg="4" Style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
                     <MudText Align="Align.Start" Typo="Typo.h3" Style="color: var(--mud-palette-black)">
                         Let's keep in <span class="text-purple-500 font-bold"
                                             style="font-family: 'Nothing You Could Do', cursive;">touch!</span>
@@ -88,6 +88,11 @@
                               Class="pa-5" />
                 </MudItem>
             </MudGrid>
+            <MudElement HtmlTag="div" Class="d-flex align-end">
+                <MudText Align="Align.Start" Typo="Typo.body2" Style="color: var(--mud-palette-black)">
+                    Copyright 2024. All rights reserved Bryan Sanchez Ortiz
+                </MudText>
+            </MudElement>
         </MudElement>
         <MudScrollToTop>
             <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.ArrowCircleUp" />

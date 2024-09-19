@@ -1,0 +1,28 @@
+﻿<MudTimeline Class="pa-5" TimelineOrientation="Orientation">
+    <MudTimelineItem Color="Color.Primary">
+        <MudText Align="Align.Center" Typo="Typo.button">
+            Research & Scope
+        </MudText>
+    </MudTimelineItem>
+    <MudTimelineItem>
+        <MudText Align="Align.Center" Typo="Typo.button">
+            Custom Development & Design
+        </MudText>
+    </MudTimelineItem>
+    <MudTimelineItem Color="Color.Primary">
+        <MudText Align="Align.Center" Typo="Typo.button">
+            Training & Go-live
+        </MudText>
+    </MudTimelineItem>
+    <MudTimelineItem>
+        <MudText Align="Align.Center" Typo="Typo.button">
+            Maintenance
+        </MudText>
+    </MudTimelineItem>
+</MudTimeline>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public TimelineOrientation Orientation { get; set; }
+}
