@@ -174,19 +174,10 @@ code {
 }
 
 .animated-background {
+    background-size: 250% 250%;
     -webkit-animation: animation 15s ease infinite;
     -moz-animation: animation 15s ease infinite;
     animation: animation 15s ease infinite;
-}
-
-@keyframes animation {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
 }
 
 @-webkit-keyframes animation {
