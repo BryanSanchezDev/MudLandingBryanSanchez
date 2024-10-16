@@ -52,10 +52,10 @@
     </MudGrid>
 </MudPaper>
 
-<MudOverlay @bind-Visible="_open" AutoClose="true" />
+@* <MudOverlay @bind-Visible="_open" AutoClose="true" />
 <MudPopover Open="@_open" Fixed="true" AnchorOrigin="Origin.TopCenter" TransformOrigin="Origin.TopCenter">
     <GreetingCard OnClose="ToggleOpen" />
-</MudPopover>
+</MudPopover> *@
 
 @code {
     private bool _open;
