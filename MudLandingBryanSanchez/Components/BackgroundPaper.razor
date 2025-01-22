@@ -1,0 +1,8 @@
+﻿<MudPaper Class="animated-background bg-gradient-to-r from-gray-800 via-indigo-800 to-yellow-600 pa-5" Elevation="5">
+	@ChildContent
+</MudPaper>
+
+@code {
+	[Parameter]
+	public RenderFragment ChildContent { get; set; }
+}

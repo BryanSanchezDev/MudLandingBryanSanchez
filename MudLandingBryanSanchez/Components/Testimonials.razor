@@ -1,4 +1,4 @@
-﻿<MudPaper Class="pa-5 mb-5 from-white to-gray-300">
+﻿<BackgroundPaper>
     <MudGrid>
         <MudItem lg="12">
             <MudText Align="Align.Center" Typo="Typo.h3">
@@ -9,7 +9,7 @@
         </MudItem>
         <MudItem xs="12" lg="6">
             <MudList T="string">
-                <MudListItem OnClick="() => UpdateText(0)">
+                <MudListItem Class="mud-elevation-4" OnClick="() => UpdateText(0)">
                     <AvatarContent>
                         <MudAvatar>
                             <MudImage Src="./images/profilepic.jpg" />
@@ -20,7 +20,7 @@
                         <MudText Typo="Typo.subtitle1">Lorem ipsum dolor sit amet</MudText>
                     </ChildContent>
                 </MudListItem>
-                <MudListItem OnClick="() => UpdateText(1)">
+                <MudListItem Class="mud-elevation-4" OnClick="() => UpdateText(1)">
                     <AvatarContent>
                         <MudAvatar>
                             <MudImage Src="./images/profilepic.jpg" />
@@ -31,7 +31,7 @@
                         <MudText Typo="Typo.subtitle1">Lorem ipsum dolor sit amet</MudText>
                     </ChildContent>
                 </MudListItem>
-                <MudListItem OnClick="() => UpdateText(2)">
+                <MudListItem Class="mud-elevation-4" OnClick="() => UpdateText(2)">
                     <AvatarContent>
                         <MudAvatar>
                             <MudImage Src="./images/profilepic.jpg" />
@@ -69,8 +69,7 @@
             </MudCarousel>
         </MudItem>
     </MudGrid>
-
-</MudPaper>
+</BackgroundPaper>
 
 @code {
     private int selectedIndex;
