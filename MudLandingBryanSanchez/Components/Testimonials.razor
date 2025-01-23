@@ -12,34 +12,34 @@
                 <MudListItem Class="mud-elevation-4" OnClick="() => ChangeCarouselItem(0)">
                     <AvatarContent>
                         <MudAvatar>
-                            <MudImage Src="./images/profilepic.jpg" />
+                            <MudImage Src="./images/CarlosG.jpg" />
                         </MudAvatar>
                     </AvatarContent>
                     <ChildContent>
-                        <MudText Typo="Typo.h6">Heading</MudText>
-                        <MudText Typo="Typo.subtitle1">Lorem ipsum dolor sit amet</MudText>
+                        <MudText Typo="Typo.h6">Carlos Gutierrez</MudText>
+                        <MudText Typo="Typo.subtitle1">Senior Project Manager</MudText>
                     </ChildContent>
                 </MudListItem>
                 <MudListItem Class="mud-elevation-4" OnClick="() => ChangeCarouselItem(1)">
                     <AvatarContent>
                         <MudAvatar>
-                            <MudImage Src="./images/profilepic.jpg" />
+                            <MudImage Src="./images/PabloV.jpg" />
                         </MudAvatar>
                     </AvatarContent>
                     <ChildContent>
-                        <MudText Typo="Typo.h6">Heading</MudText>
-                        <MudText Typo="Typo.subtitle1">Lorem ipsum dolor sit amet</MudText>
+                        <MudText Typo="Typo.h6">Pablo Viquez</MudText>
+                        <MudText Typo="Typo.subtitle1">Technical Lead</MudText>
                     </ChildContent>
                 </MudListItem>
                 <MudListItem Class="mud-elevation-4" OnClick="() => ChangeCarouselItem(2)">
                     <AvatarContent>
                         <MudAvatar>
-                            <MudImage Src="./images/profilepic.jpg" />
+                            <MudImage Src="./images/RyanH.jpg" />
                         </MudAvatar>
                     </AvatarContent>
                     <ChildContent>
-                        <MudText Typo="Typo.h6">Heading</MudText>
-                        <MudText Typo="Typo.subtitle1">Lorem ipsum dolor sit amet</MudText>
+                        <MudText Typo="Typo.h6">Ryan Harlamert</MudText>
+                        <MudText Typo="Typo.subtitle1">Lead Developer</MudText>
                     </ChildContent>
                 </MudListItem>
             </MudList>
@@ -57,11 +57,9 @@
                 <ItemTemplate>
                     <div class="d-flex justify-center" style="height:100%;">
                         <MudStack Class="mud-width-full" Justify="Justify.FlexStart" Wrap="Wrap.NoWrap">
-                            <MudText Typo="Typo.h4" Class="pb-2">
-                                @context.ElementAt(0)
-                            </MudText>
+                            <MudRating SelectedValue="5" Size="Size.Large" />
                             <MudText Typo="Typo.body1">
-                                @context.ElementAt(1)
+                                @context
                             </MudText>
                         </MudStack>
                     </div>
@@ -73,12 +71,12 @@
 
 @code {
     private int selectedIndex;
-    private MudCarousel<string[]>? _carousel;
-    private List<string[]> _source = new List<string[]>
+    private MudCarousel<string>? _carousel;
+    private List<string> _source = new List<string>
     {
-        new string[] { "Header 1", "Text 1 describing the first testimonial." },
-        new string[] { "Header 2", "Text 2 describing the first testimonial." },
-        new string[] { "Header 3", "Text 3 describing the first testimonial." }
+        "Attitude over all, focused on results and converting every idea into real-world app. It’s great having Bryan for my project.",
+        "I was highly impressed with Bryan's contributions. He consistently demonstrated a strong work ethic and a remarkable capacity to absorb information quickly, making him a valuable asset to any team.",
+        "Bryan is a highly capable developer with a strong work ethic. They quickly grasped complex concepts and consistently delivered high-quality work."
     };
 
     protected override void OnInitialized() =>
