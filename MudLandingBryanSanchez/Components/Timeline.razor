@@ -7,8 +7,9 @@
             </MudButton>
         </MudTimelineItem>
         <MudTimelineItem>
-            <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.Development)">
-                Custom Development & Design
+            <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.Development)"
+                       Class="@(_isVertical ? string.Empty : "ml-8")">
+                Development & Design
             </MudButton>
         </MudTimelineItem>
         <MudTimelineItem Color="Color.Primary">
@@ -25,25 +26,24 @@
         </MudTimelineItem>
     </MudTimeline>
     <MudCollapse Expanded="_open">
-            <MudCarousel @ref="_carousel"
-                         ItemsSource="@_source"
-                         @bind-SelectedIndex="_selectedIndex"
-                         Class="overflow-auto"
-                         Style="min-height:120px;"
-                         ShowBullets="false"
-                         ShowArrows="false"
-                         AutoCycle="false"
-                         EnableSwipeGesture="true">
-                <ItemTemplate>
-                    <MudText Inline="true" Typo="Typo.h6">
-                        @context.ElementAt(0)
-                    </MudText>
-                    <MudIcon Size="Size.Large" Icon="@context.ElementAt(2)" Class="pl-2 pb-2" Color="Color.Warning" />
-                    <MudText Typo="Typo.subtitle2">
-                        @((MarkupString)context.ElementAt(1))
-                    </MudText>
-                </ItemTemplate>
-            </MudCarousel>
+        <MudCarousel @ref="_carousel"
+                     ItemsSource="@_source"
+                     @bind-SelectedIndex="_selectedIndex"
+                     Style="min-height:120px;"
+                     ShowBullets="false"
+                     ShowArrows="false"
+                     AutoCycle="false"
+                     EnableSwipeGesture="true">
+            <ItemTemplate>
+                <MudText Inline="true" Typo="Typo.h6">
+                    @context.ElementAt(0)
+                </MudText>
+                <MudIcon Size="Size.Large" Icon="@context.ElementAt(2)" Class="pl-0 pb-2" Color="Color.Warning" />
+                <MudText Typo="Typo.subtitle2">
+                    @((MarkupString)context.ElementAt(1))
+                </MudText>
+            </ItemTemplate>
+        </MudCarousel>
     </MudCollapse>
 </MudElement>
 
@@ -68,7 +68,7 @@
     private List<string[]> _source = new List<string[]>
     {
         new string[] { "Research & Scope", ResearchText, Icons.Material.Filled.ScreenSearchDesktop },
-        new string[] { "Custom Development & Design", DevelopmentText, Icons.Material.Filled.BuildCircle },
+        new string[] { "Development & Design", DevelopmentText, Icons.Material.Filled.BuildCircle },
         new string[] { "Training & Go-live", GoLiveText, Icons.Material.Filled.AccessibilityNew },
         new string[] { "Maintenance", MaintenanceText, Icons.Material.Filled.SupportAgent }
     };
