@@ -1,28 +1,89 @@
-﻿<MudTimeline Class="pa-5" TimelineOrientation="Orientation">
-    <MudTimelineItem Color="Color.Primary">
-        <MudText Align="Align.Center" Typo="Typo.button">
-            Research & Scope
-        </MudText>
-    </MudTimelineItem>
-    <MudTimelineItem>
-        <MudText Align="Align.Center" Typo="Typo.button">
-            Custom Development & Design
-        </MudText>
-    </MudTimelineItem>
-    <MudTimelineItem Color="Color.Primary">
-        <MudText Align="Align.Center" Typo="Typo.button">
-            Training & Go-live
-        </MudText>
-    </MudTimelineItem>
-    <MudTimelineItem>
-        <MudText Align="Align.Center" Typo="Typo.button">
-            Maintenance
-        </MudText>
-    </MudTimelineItem>
-</MudTimeline>
+﻿<MudElement HtmlTag="div">
+    <MudTimeline Class="pa-5" TimelineAlign="TimelineAlign.Default" TimelineOrientation="Orientation">
+        <MudTimelineItem Color="Color.Primary">
+            <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.Research)"
+                       Class="@(_isVertical ? string.Empty : "ml-11")">
+                Research & Scope
+            </MudButton>
+        </MudTimelineItem>
+        <MudTimelineItem>
+            <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.Development)">
+                Custom Development & Design
+            </MudButton>
+        </MudTimelineItem>
+        <MudTimelineItem Color="Color.Primary">
+            <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.GoLive)"
+                       Class="@(_isVertical ? string.Empty : "ml-10")">
+                Training & Go-live
+            </MudButton>
+        </MudTimelineItem>
+        <MudTimelineItem>
+            <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.Maintenance)"
+                       Class="@(_isVertical ? string.Empty : "ml-14")">
+                Maintenance
+            </MudButton>
+        </MudTimelineItem>
+    </MudTimeline>
+    <MudCollapse Expanded="_open">
+            <MudCarousel @ref="_carousel"
+                         ItemsSource="@_source"
+                         @bind-SelectedIndex="_selectedIndex"
+                         Class="overflow-auto"
+                         Style="min-height:120px;"
+                         ShowBullets="false"
+                         ShowArrows="false"
+                         AutoCycle="false"
+                         EnableSwipeGesture="true">
+                <ItemTemplate>
+                    <MudText Inline="true" Typo="Typo.h6">
+                        @context.ElementAt(0)
+                    </MudText>
+                    <MudIcon Size="Size.Large" Icon="@context.ElementAt(2)" Class="pl-2 pb-2" Color="Color.Warning" />
+                    <MudText Typo="Typo.subtitle2">
+                        @((MarkupString)context.ElementAt(1))
+                    </MudText>
+                </ItemTemplate>
+            </MudCarousel>
+    </MudCollapse>
+</MudElement>
+
 
 @code {
     [Parameter]
     [EditorRequired]
     public TimelineOrientation Orientation { get; set; }
+
+    private bool _open;
+    private bool _isVertical => Orientation == TimelineOrientation.Vertical;
+    private string? Title = string.Empty;
+    private string? Description = string.Empty;
+    private MudCarousel<string[]>? _carousel;
+    private int _selectedIndex = 0;
+
+    private const string ResearchText = "In this phase, we gather requirements, conduct market research, and define the project scope <br/> to ensure alignment with your goals and expectations.";
+    private const string DevelopmentText = "We will create tailored software solutions by developing code and designing  <br/>  interfaces that meet specified requirements, ensuring a seamless user experience";
+    private const string GoLiveText = "You will get comprehensive training for your team and facilitate the transition <br/> to the live environment, ensuring that all users are equipped to utilize the new system effectively.";
+    private const string MaintenanceText = "Post-launch, we offer ongoing support and maintenance services to promptly address <br/> any issues and implement updates, ensuring your software remains efficient and secure.";
+
+    private List<string[]> _source = new List<string[]>
+    {
+        new string[] { "Research & Scope", ResearchText, Icons.Material.Filled.ScreenSearchDesktop },
+        new string[] { "Custom Development & Design", DevelopmentText, Icons.Material.Filled.BuildCircle },
+        new string[] { "Training & Go-live", GoLiveText, Icons.Material.Filled.AccessibilityNew },
+        new string[] { "Maintenance", MaintenanceText, Icons.Material.Filled.SupportAgent }
+    };
+
+    private void ChangeCarouselItem(WorkStepValues key)
+    {
+        _open = true;
+        _selectedIndex = (int)key;
+    }
+
+    private enum WorkStepValues
+    {
+        Research,
+        Development,
+        GoLive,
+        Maintenance
+    }
 }

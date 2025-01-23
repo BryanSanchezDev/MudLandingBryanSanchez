@@ -47,6 +47,9 @@
             @Body
         </MudContainer>
         <MudDivider />
+        <MudScrollToTop ScrollBehavior="ScrollBehavior.Smooth" Class="mb-5">
+            <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.KeyboardArrowUp" />
+        </MudScrollToTop>
         <MudCard Class="align-end pa-5">
             <MudGrid Justify="Justify.FlexStart" Spacing="0">
                 <MudItem lg="4" Style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
@@ -57,6 +60,13 @@
                     <MudText Align="Align.Start" Typo="Typo.subtitle1">
                         Find me on any of these platforms, I'll respond in 1-2 business days.
                     </MudText>
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               Href="https://zcal.co/bryansanchez/discovery"
+                               Target="_blank"
+                               Class="mt-2">
+                        Schedule a meeting
+                    </MudButton>
                 </MudItem>
                 <MudItem lg="4">
                     <MudButtonGroup Variant="Variant.Text" Class="d-flex justify-center pb-5">
