@@ -141,3 +141,8 @@ a, .btn-link {
         transform: translateX(50%);
     }
 }
+
+.brand-text {
+    color: #ad46ff;
+    font-family: 'Nothing You Could Do', cursive;
+}

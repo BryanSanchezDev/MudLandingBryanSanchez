@@ -17,8 +17,7 @@
         <MudItem xs="12" lg="2">
             <div data-aos="fade-down" data-aos-delay="50">
                 <MudText Typo="Typo.h5">
-                    Have great <span class="text-purple-500 font-bold"
-                                     style="font-family: 'Nothing You Could Do', cursive;">IDEA</span>
+                    Have great <span class="font-bold brand-text">IDEA</span>
                     <br class="max-sm:hidden lg:hidden xl:block">for a Web Application?
                 </MudText>
             </div>
@@ -28,11 +27,11 @@
                 <MudImage Src="./images/Monitors.gif"
                           Height="150"
                           Width="150" />
-                <MudButton Variant="Variant.Filled" 
+@*                 <MudButton Variant="Variant.Filled" 
                            Color="Color.Primary"
                            OnClick="@ToggleOpen">
                     Let's meet
-                </MudButton>
+                </MudButton> *@
             </MudStack>
         </MudItem>
         <MudItem xs="12" lg="4">
@@ -51,11 +50,6 @@
         </MudItem>
     </MudGrid>
 </MudPaper>
-
-@* <MudOverlay @bind-Visible="_open" AutoClose="true" />
-<MudPopover Open="@_open" Fixed="true" AnchorOrigin="Origin.TopCenter" TransformOrigin="Origin.TopCenter">
-    <GreetingCard OnClose="ToggleOpen" />
-</MudPopover> *@
 
 @code {
     private bool _open;
