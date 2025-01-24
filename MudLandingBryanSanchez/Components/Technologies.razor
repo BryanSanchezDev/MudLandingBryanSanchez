@@ -1,29 +1,34 @@
 ﻿<BackgroundPaper>
-    <MudStack AlignItems="AlignItems.Center">
-        <MudText Typo="Typo.h3">
-            <span class="brand-text font-bold">Technos</span> we use
-        </MudText>
-        <MudCarousel Class="mud-width-full imgBox" Style="height:100px;" 
-                     ShowArrows="false" 
-                     ShowBullets="false" 
-                     EnableSwipeGesture="false" 
-                     AutoCycleTime="new TimeSpan(0, 0, 2)"
-                     AutoCycle="true"
-                     TData="object">
-            <MudCarouselItem Transition="Transition.Fade">
-                <MudImage Class="image-grayscale" Src="./logos/html.png" />
-                <MudImage Class="image-grayscale" Src="./logos/css.png" />
-                <MudImage Class="image-grayscale" Src="./logos/js.png" />
-                <MudImage Class="image-grayscale" Src="./logos/c-sharp.png" />
-                <MudImage Class="image-grayscale" Src="./logos/vue.png" />
-            </MudCarouselItem>
-            <MudCarouselItem Transition="Transition.Fade">
-                <MudImage Class="image-grayscale" Src="./logos/blazor.png" />
-                <MudImage Class="image-grayscale" Src="./logos/angular.png" />
-                <MudImage Class="image-grayscale" Src="./logos/jquery.png" />
-                <MudImage Class="image-grayscale" Src="./logos/tailwind.png" />
-                <MudImage Class="image-grayscale" Src="./logos/dotnet.png" />
-            </MudCarouselItem>
-        </MudCarousel>
-    </MudStack>
+    <MudGrid>
+        <MudItem xs="12">
+            <MudText Align="Align.Center" Typo="Typo.h3">
+                <span class="brand-text font-bold">Technos</span> we use
+            </MudText>
+        </MudItem>
+        <MudItem xs="12">
+            <MudCarousel ShowArrows="false"
+                         Class="imgBox"
+                         Style="height:100px;"
+                         ShowBullets="false"
+                         EnableSwipeGesture="false"
+                         AutoCycleTime="new TimeSpan(0, 0, 2)"
+                         AutoCycle="true"
+                         TData="object">
+                <MudCarouselItem Transition="Transition.Fade">
+                    <MudImage Class="image-grayscale" Src="./logos/html.png" />
+                    <MudImage Class="image-grayscale" Src="./logos/css.png" />
+                    <MudImage Class="image-grayscale" Src="./logos/js.png" />
+                    <MudImage Class="image-grayscale" Src="./logos/c-sharp.png" />
+                    <MudImage Class="image-grayscale" Src="./logos/vue.png" />
+                </MudCarouselItem>
+                <MudCarouselItem Transition="Transition.Fade">
+                    <MudImage Class="image-grayscale" Src="./logos/blazor.png" />
+                    <MudImage Class="image-grayscale" Src="./logos/angular.png" />
+                    <MudImage Class="image-grayscale" Src="./logos/jquery.png" />
+                    <MudImage Class="image-grayscale" Src="./logos/tailwind.png" />
+                    <MudImage Class="image-grayscale" Src="./logos/dotnet.png" />
+                </MudCarouselItem>
+            </MudCarousel>
+        </MudItem>
+    </MudGrid>
 </BackgroundPaper>
