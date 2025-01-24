@@ -146,3 +146,7 @@ a, .btn-link {
     color: #ad46ff;
     font-family: 'Nothing You Could Do', cursive;
 }
+
+.image-grayscale {
+    -webkit-filter: grayscale(1);
+}
