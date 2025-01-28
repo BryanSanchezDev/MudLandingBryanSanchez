@@ -1,4 +1,6 @@
-﻿@inherits LayoutComponentBase
+﻿@inject IJSRuntime _js;
+
+@inherits LayoutComponentBase
 
 <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
 <MudPopoverProvider />
@@ -23,6 +25,11 @@
         </MudHidden>
         <MudSpacer />
         <MudButtonGroup Variant="Variant.Filled">
+            <MudTooltip Text="Download CV">
+                <MudIconButton Icon="@Icons.Material.Filled.FileDownload"
+                               OnClick="DownloadCV"
+                               Color="Color.Inherit" />
+            </MudTooltip>
             <MudIconButton Icon="@Icons.Custom.Brands.GitHub"
                            Href="@GitHubUrl"
                            Target="_blank"
@@ -125,4 +132,7 @@
     const string GitHubUrl = "https://github.com/BryanSanchezDev";
     const string LinkedInUrl = "https://www.linkedin.com/in/bryan-sanchez-ortiz/";
     const string WhatsAppUrl = "https://wa.link/z4iq31";
+
+    private async Task DownloadCV() =>
+        await _js.InvokeVoidAsync("downloadCVFile");
 }

@@ -63,7 +63,7 @@
     {
         if (firstRender)
         {
-            module = await JS.InvokeAsync<IJSObjectReference>("import", "/typewriter.js");
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/typewriter.js");
 
             await module.InvokeVoidAsync("typeText");
         }
