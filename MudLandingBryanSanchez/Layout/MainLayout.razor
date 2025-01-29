@@ -75,38 +75,44 @@
                     </MudButton>
                 </MudItem>
                 <MudItem lg="4">
-                    <MudButtonGroup Variant="Variant.Text" Class="d-flex justify-center pb-5">
-                        <MudButton StartIcon="@Icons.Custom.Brands.GitHub"
-                                   Href="@GitHubUrl"
-                                   Target="_blank"
-                                   Size="Size.Large"
-                                   IconSize="Size.Large"
-                                   IconColor="Color.Primary">
-                            <MudText Typo="Typo.subtitle1">
-                                GitHub
-                            </MudText>
-                        </MudButton>
-                        <MudButton StartIcon="@Icons.Custom.Brands.LinkedIn"
-                                   Href="@LinkedInUrl"
-                                   Target="_blank"
-                                   Size="Size.Large"
-                                   IconSize="Size.Large"
-                                   IconColor="Color.Primary">
-                            <MudText Typo="Typo.subtitle1">
-                                LinkedIn
-                            </MudText>
-                        </MudButton>
-                        <MudButton StartIcon="@Icons.Custom.Brands.WhatsApp"
-                                   Href="@WhatsAppUrl"
-                                   Target="_blank"
-                                   Size="Size.Large"
-                                   IconSize="Size.Large"
-                                   IconColor="Color.Primary">
-                            <MudText Typo="Typo.subtitle1">
-                                WhatsApp
-                            </MudText>
-                        </MudButton>
-                    </MudButtonGroup>
+                    <MudStack AlignItems="AlignItems.Center">
+                        <MudButtonGroup Variant="Variant.Text" Class="d-flex justify-center pb-5">
+                            <MudButton StartIcon="@Icons.Custom.Brands.GitHub"
+                                       Href="@GitHubUrl"
+                                       Target="_blank"
+                                       Size="Size.Large"
+                                       IconSize="Size.Large"
+                                       IconColor="Color.Primary">
+                                <MudText Typo="Typo.subtitle1">
+                                    GitHub
+                                </MudText>
+                            </MudButton>
+                            <MudButton StartIcon="@Icons.Custom.Brands.LinkedIn"
+                                       Href="@LinkedInUrl"
+                                       Target="_blank"
+                                       Size="Size.Large"
+                                       IconSize="Size.Large"
+                                       IconColor="Color.Primary">
+                                <MudText Typo="Typo.subtitle1">
+                                    LinkedIn
+                                </MudText>
+                            </MudButton>
+                            <MudButton StartIcon="@Icons.Custom.Brands.WhatsApp"
+                                       Href="@WhatsAppUrl"
+                                       Target="_blank"
+                                       Size="Size.Large"
+                                       IconSize="Size.Large"
+                                       IconColor="Color.Primary">
+                                <MudText Typo="Typo.subtitle1">
+                                    WhatsApp
+                                </MudText>
+                            </MudButton>
+                        </MudButtonGroup>
+                        <MudFab OnClick="DownloadCV"
+                                Size="Size.Small"
+                                StartIcon="@Icons.Material.Filled.Download"
+                                Label="Check My Resume" />
+                    </MudStack>
                 </MudItem>
                 <MudItem lg="4" Class="d-flex justify-end">
                     <MudImage Src="./images/DevelopmentPurple.gif"

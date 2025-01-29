@@ -3,25 +3,25 @@
         <MudTimeline Class="pa-5 mb-4" TimelineAlign="TimelineAlign.Default" TimelineOrientation="Orientation">
             <MudTimelineItem Color="Color.Primary">
                 <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.Research)"
-                           Class="@(_isVertical ? string.Empty : "ml-11")">
+                           Class="@($"{(_isVertical ? string.Empty : "ml-11")} mud-elevation-4")">
                     Research & Scope
                 </MudButton>
             </MudTimelineItem>
             <MudTimelineItem>
                 <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.Development)"
-                           Class="@(_isVertical ? string.Empty : "ml-8")">
+                           Class="@($"{(_isVertical ? string.Empty : "ml-8")} mud-elevation-4")">
                     Development & Design
                 </MudButton>
             </MudTimelineItem>
             <MudTimelineItem Color="Color.Primary">
                 <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.GoLive)"
-                           Class="@(_isVertical ? string.Empty : "ml-10")">
+                           Class="@($"{(_isVertical ? string.Empty : "ml-10")} mud-elevation-4")">
                     Training & Go-live
                 </MudButton>
             </MudTimelineItem>
             <MudTimelineItem>
                 <MudButton OnClick="() => ChangeCarouselItem(WorkStepValues.Maintenance)"
-                           Class="@(_isVertical ? string.Empty : "ml-14")">
+                           Class="@($"{(_isVertical ? string.Empty : "ml-14")} mud-elevation-4")">
                     Maintenance
                 </MudButton>
             </MudTimelineItem>
